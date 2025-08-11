@@ -26,7 +26,7 @@ A simple quiz application built with Flask backend, PostgreSQL database, and ser
 
 ### 1. Clone the repository
 
-git clone <your_repo_url>
+git clone https://github.com/Lokeshkrishna07/Quiz_App_Flask_PostgreSQL.git
 cd quiz_app/backend
 
 ### 2. Create PostgreSQL database and user
