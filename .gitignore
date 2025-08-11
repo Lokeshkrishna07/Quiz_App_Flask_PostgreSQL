@@ -1,0 +1,31 @@
+# Python files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.env
+env/
+venv/
+ENV/
+.venv/
+
+# Flask instance folder
+instance/
+
+# Migrations
+migrations/
+
+# VSCode settings
+.vscode/
+
+# MacOS
+.DS_Store
+
+# PyCharm
+.idea/
+
+# Logs
+*.log
+
+# Database files (if any local SQLite or other)
+*.sqlite3

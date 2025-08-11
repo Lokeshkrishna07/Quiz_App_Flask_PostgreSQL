@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Quiz Result</h2>
+<p>You scored <strong>{{ score }}</strong> out of <strong>{{ total }}</strong>.</p>
+<a href="{{ url_for('html_bp.home') }}">Back to Quizzes</a>
+{% endblock %}
