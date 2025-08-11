@@ -13,7 +13,6 @@ A simple quiz application built with Flask backend, PostgreSQL database, and ser
 - Simple and clean UI using templates and CSS
 
 ---
-
 ## Prerequisites
 
 - Python 3.8+  
@@ -27,77 +26,66 @@ A simple quiz application built with Flask backend, PostgreSQL database, and ser
 
 ### 1. Clone the repository
 
-```bash
 git clone <your_repo_url>
 cd quiz_app/backend
-2. Create PostgreSQL database and user
+
+### 2. Create PostgreSQL database and user
+
 Login to PostgreSQL shell:
 
-bash
-Copy
-Edit
 psql -U postgres
+
 Create database and user:
 
-sql
-Copy
-Edit
 CREATE DATABASE quiz_db;
 CREATE USER quiz_user WITH PASSWORD 'your_password';
 GRANT ALL PRIVILEGES ON DATABASE quiz_db TO quiz_user;
 \q
-Replace 'your_password' with a secure password.
 
-3. Setup Python environment
+*Replace 'your_password' with a secure password.*
+
+### 3. Setup Python environment
+
 Create and activate virtual environment:
 
-bash
-Copy
-Edit
 python3 -m venv venv
 source venv/bin/activate        # macOS/Linux
 venv\Scripts\activate           # Windows PowerShell
-4. Install dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-5. Configure environment variables
-Create a .env file in the backend/ folder with:
 
-env
-Copy
-Edit
+### 4. Install dependencies
+
+pip install -r requirements.txt
+
+### 5. Configure environment variables
+
+Create a `.env` file in the `backend/` folder with:
+
 FLASK_ENV=development
 SECRET_KEY=your_secret_key_here
 DATABASE_URL=postgresql://quiz_user:your_password@localhost:5432/quiz_db
-Replace your_password and your_secret_key_here accordingly.
 
-6. Run database migrations
+*Replace your_password and your_secret_key_here accordingly.*
+
+### 6. Run database migrations
+
 Initialize migration folder (only once):
 
-bash
-Copy
-Edit
 flask db init
+
 Generate migration scripts:
 
-bash
-Copy
-Edit
 flask db migrate -m "Initial migration"
+
 Apply migrations to database:
 
-bash
-Copy
-Edit
 flask db upgrade
-7. Run the Flask app
-Make sure you are inside the backend/ directory, then run:
 
-bash
-Copy
-Edit
+### 7. Run the Flask app
+
+Make sure you are inside the `backend/` directory, then run:
+
 python3 run.py
+
 Open your browser at: http://127.0.0.1:5000/
+
 
